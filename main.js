@@ -9,13 +9,13 @@ function goToPage(pageUrl){
 // One player Gameplay
 
 const words = ["tiger", "elephant", "lion", "gorilla", "sheep", "anteater", "giraffe", "seal", "bear", "panther"];
-
+lettersGuessed = [];
 
 function startGame(){
 	targetWord = randomWord();
 	currentGuess = createCurrentGuess(targetWord);
 	livesLeft = 6;
-	lettersGuessed = [];
+	
 	hangmanImageIndex = 0;
 	
 	updateWordDisplay();
@@ -61,7 +61,7 @@ function guessLetter(){
 	//If valid guess then enter into array
 	lettersGuessed.push(guess);
 	
-	let correctLetter = updateGuessedWord(guess);
+	let correctLetter = updateCurrentGuess(guess);
 	
 	// If letter not found in target word then handle then handle incorrect guess
 	if (!correctLetter) {
