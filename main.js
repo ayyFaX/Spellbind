@@ -11,7 +11,7 @@ function goToPage(pageUrl){
 const words = ["tiger", "elephant", "lion", "gorilla", "sheep", "anteater", "giraffe", "seal", "bear", "panther"];
 
 
-startGame(){
+function startGame(){
 	targetWord = randomWord();
 	currentGuess = createCurrentGuess(targetWord);
 	livesLeft = 6;
@@ -32,12 +32,12 @@ startGame(){
 
 
 //Function to get random word from array
-randomWord(){
+function randomWord(){
 	return words[Math.floor(Math.random() * words.length)];
 }
 
 //Function to create the visual for current guessed word
-createCurrentGuess(target){
+function createCurrentGuess(target){
 	return "_".repeat(target.length);
 }
 
@@ -52,7 +52,7 @@ updateGuessedLetters(){
 }
 
 //Function to get guess from user and validate it
-guessLetter(){
+function guessLetter(){
 	//Defined as const as we do not want this change in its scope
 	const guess = document.getElementById('guessInput').value.toLowerCase();
 	//If validation fails return to exits function
@@ -73,7 +73,7 @@ guessLetter(){
 }
 
 //Function to validate user guesses
-validateGuess(guess){
+function validateGuess(guess){
 	//Check if guess is null,undefined or not an alphabetic letter regardless of case if so show error message
 	if (!guess || !guess.match(/[a-z]/i)) {
         alert('Please enter a valid letter!');
@@ -89,10 +89,12 @@ validateGuess(guess){
 }
 
 
-incorrectGuess(){
+function incorrectGuess(){
 	livesLeft--;
-	alert("Incorrect, you have ${livesLeft} lives left");
+	alert("Incorrect, you have ${livesLeft} lives left"); 
 }
+
+
 
 
 
