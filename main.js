@@ -10,13 +10,14 @@ function goToPage(pageUrl){
 
 const words = ["tiger", "elephant", "lion", "gorilla", "sheep", "anteater", "giraffe", "seal", "bear", "panther"];
 lettersGuessed = [];
-
-function startGame(){
-	targetWord = randomWord();
-	currentGuess = createCurrentGuess(targetWord);
-	livesLeft = 6;
+targetWord = randomWord();
+currentGuess = createCurrentGuess(targetWord);
+livesLeft = 6;
 	
 	hangmanImageIndex = 0;
+
+function startGame(){
+	
 	
 	updateWordDisplay();
 	updateGuessedLetters();
@@ -119,8 +120,9 @@ function updateCurrentGuess(guess){
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('startBtn').addEventListener('click', startGame);
+document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('guessBtn').addEventListener('click', guessLetter);
+	startGame();
 });
+
 
