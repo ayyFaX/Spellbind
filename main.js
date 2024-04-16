@@ -13,8 +13,7 @@ lettersGuessed = [];
 targetWord = randomWord();
 currentGuess = createCurrentGuess(targetWord);
 livesLeft = 6;
-	
-	hangmanImageIndex = 0;
+hangmanImageIndex = 0;
 
 
 
@@ -36,6 +35,11 @@ function updateWordDisplay(){
 // Function to update guessed letters display
 function updateGuessedLetters(){
 	document.getElementById('lettersGuessed').textContent = lettersGuessed.join(', ');
+}
+
+// Function to update lives left
+function updateLivesLeft(){
+	document.getElementById('livesRemaining').textContent = livesLeft
 }
 
 // Function to get guess from user and validate it
@@ -82,6 +86,7 @@ function incorrectGuess(){
 	// Take away a life
 	livesLeft--;
 	alert('Incorrect, you have ' + livesLeft + ' lives left'); 
+	updateLivesLeft();
 }
 
 // Function to update the word thats been guessed so far
