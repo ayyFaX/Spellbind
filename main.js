@@ -92,7 +92,7 @@ function validateGuess(guess){
 function incorrectGuess(){
 	// Take away a life
 	livesLeft--;
-	alert("Incorrect, you have ${livesLeft} lives left"); 
+	alert('Incorrect, you have ${livesLeft} lives left'); 
 }
 
 // Function to update the word thats been guessed so far
