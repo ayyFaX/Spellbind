@@ -15,7 +15,7 @@ function startGame(){
 	targetWord = randomWord();
 	currentGuess = createCurrentGuess(targetWord);
 	livesLeft = 6;
-	lettersGuessed[];
+	lettersGuessed = [];
 	hangmanImageIndex = 0;
 	
 	updateWordDisplay();
@@ -99,7 +99,7 @@ function incorrectGuess(){
 function updateCurrentGuess(guess){
 	let found = false;
 	// Loops through the target word looking for guess to match character
-	for (let i = 0, i < targetWord, i++){
+	for (let i = 0; i < targetWord; i++){
 		// If guees matches character then add it to the current guess to be displayed
 		if (targetword[i] === guess) {
 			currentGuess = currentGuess.substr(0, i) + guess + currentGuess.substr(i + 1);
@@ -119,8 +119,8 @@ function updateCurrentGuess(guess){
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('startBtn').addEventListener('click', startGame);
+    document.getElementById('guessBtn').addEventListener('click', guessLetter);
+});
 
-
-//Event listener to start game when start button clicked
-document.getElementById('startBtn').addEventListener('click', startGame);
-document.getElementById('guessBtn').addEventListener('click', guessLetter);
