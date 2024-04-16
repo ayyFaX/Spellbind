@@ -21,11 +21,12 @@ updateWordDisplay();
 // Function to get random word from array
 function randomWord(){
 	return words[Math.floor(Math.random() * words.length)];
+	
 }
 
 //Function to create the visual for current guessed word
 function createCurrentGuess(target){
-	return "_ ".repeat(target.length);
+	return "_".repeat(target.length);
 }
 
 // Function to update the current word display
@@ -94,9 +95,9 @@ function incorrectGuess(){
 function updateCurrentGuess(guess){
 	let found = false;
 	// Loops through the target word looking for guess to match character
-	for (let i = 0; i < targetWord; i++){
+	for (let i = 0; i < targetWord.length; i++){
 		// If guees matches character then add it to the current guess to be displayed
-		if (targetword[i] === guess) {
+		if (guess === targetWord[i]) {
 			currentGuess = currentGuess.substr(0, i) + guess + currentGuess.substr(i + 1);
 			found = true;
 		}
