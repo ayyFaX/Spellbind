@@ -22,7 +22,8 @@ startGame(){
 
 
 
-
+	document.getElementById('startBtn').style.display = 'none';
+	document.getElementById(
 
 
 
@@ -50,3 +51,19 @@ updateGuess(){
 updateGuessedLetters(){
 	document.getElementById('lettersGuessed').textContent = lettersGuessed.join(', ');
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Event listener to start game when start button clicked
+document.getElementById('startBtn').addEventListener('click', startGame);
