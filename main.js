@@ -16,20 +16,6 @@ livesLeft = 6;
 	
 	hangmanImageIndex = 0;
 
-function startGame(){
-	
-	
-	updateWordDisplay();
-	updateGuessedLetters();
-
-
-
-	
-
-
-
-
-}
 
 
 // Function to get random word from array
@@ -62,14 +48,16 @@ function guessLetter(){
 	//If valid guess then enter into array
 	lettersGuessed.push(guess);
 	
-	let correctLetter = updateCurrentGuess(guess);
+	let found = updateCurrentGuess(guess);
 	
 	// If letter not found in target word then handle then handle incorrect guess
-	if (!correctLetter) {
+	if (!found) {
 				incorrectGuess();
 		}
 	
 	updateWordDisplay();
+	updateWordDisplay();
+	updateGuessedLetters();
 
 }
 
@@ -93,7 +81,7 @@ function validateGuess(guess){
 function incorrectGuess(){
 	// Take away a life
 	livesLeft--;
-	alert('Incorrect, you have ${livesLeft} lives left'); 
+	alert('Incorrect, you have ' + livesLeft + ' lives left'); 
 }
 
 // Function to update the word thats been guessed so far
@@ -122,7 +110,7 @@ function updateCurrentGuess(guess){
 
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('guessBtn').addEventListener('click', guessLetter);
-	startGame();
+	
 });
 
-
+	
