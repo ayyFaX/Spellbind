@@ -14,6 +14,7 @@ targetWord = randomWord();
 currentGuess = createCurrentGuess(targetWord);
 livesLeft = 6;
 hangmanImageIndex = 0;
+updateWordDisplay();
 
 
 
@@ -24,7 +25,7 @@ function randomWord(){
 
 //Function to create the visual for current guessed word
 function createCurrentGuess(target){
-	return "_".repeat(target.length);
+	return "_ ".repeat(target.length);
 }
 
 // Function to update the current word display
@@ -59,7 +60,7 @@ function guessLetter(){
 				incorrectGuess();
 		}
 	
-	updateWordDisplay();
+	
 	updateWordDisplay();
 	updateGuessedLetters();
 
