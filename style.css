@@ -5,18 +5,22 @@ body {
             background-color: #5AC3B0; /* Light pink background */
         }
 
-        .container {
+        
+		.container {
             text-align: center;
             margin-top: 50px;
         }
 
-        h1 {
+        
+		h1 {
             color: #001F3F;
         }
+		
 		
 		p {
 			color: #001F3F;
 		}
+		
 		
 		.btn {
             display: inline-block;
@@ -35,3 +39,32 @@ body {
         .btn:hover {
             background-color: #FFC800;
         }
+		
+		
+		.game-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		.game-area {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 80%;
+		}
+
+		.hangman-section {
+			flex: 1;
+		}
+
+		.game-info {
+			flex: 2;
+		}
+
+		.guess-section {
+			margin-top: 20px;
+		}
+
