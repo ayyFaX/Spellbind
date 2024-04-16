@@ -7,7 +7,7 @@ function goToPage(pageUrl){
 
 //One player Gameplay
 
-const word = ["tiger", "elephant", "lion", "gorilla", "sheep", "anteater", "giraffe", "seal", "bear", "panther"];
+const words = ["tiger", "elephant", "lion", "gorilla", "sheep", "anteater", "giraffe", "seal", "bear", "panther"];
 
 
 startGame(){
@@ -16,6 +16,9 @@ startGame(){
 	livesLeft = 6;
 	lettersGuessed[];
 	hangmanImageIndex = 0;
+	
+	updateGuess();
+	updateGuessedLetters();
 
 
 
@@ -36,4 +39,14 @@ randomWord(){
 //Function to create the visual for current guessed word
 createCurrentGuess(target){
 	return "_".repeat(target.length);
+}
+
+//Function to update the current guessed word
+updateGuess(){
+	document.getElementById('wordDisplay').textContent = currentGuess;
+}
+
+//Function to update guessed letters display
+updateGuessedLetters(){
+	document.getElementById('lettersGuessed').textContent = lettersGuessed.join(', ');
 }
