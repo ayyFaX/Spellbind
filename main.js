@@ -13,7 +13,9 @@ const word = ["tiger", "elephant", "lion", "gorilla", "sheep", "anteater", "gira
 startGame(){
 	targetWord = randomWord();
 	currentGuess = createCurrentGuess(targetWord);
-	
+	livesLeft = 6;
+	lettersGuessed[];
+	hangmanImageIndex = 0;
 
 
 
