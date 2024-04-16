@@ -18,7 +18,7 @@ startGame(){
 	lettersGuessed[];
 	hangmanImageIndex = 0;
 	
-	updateGuess();
+	updateWordDisplay();
 	updateGuessedLetters();
 
 
@@ -41,8 +41,8 @@ createCurrentGuess(target){
 	return "_".repeat(target.length);
 }
 
-//Function to update the current guessed word
-updateGuess(){
+//Function to update the current word display
+updateWordDisplay(){
 	document.getElementById('wordDisplay').textContent = currentGuess;
 }
 
@@ -61,12 +61,14 @@ guessLetter(){
 	//If valid guess then enter into array
 	lettersGuessed.push(guess);
 	
-	let correctLetter = updateGuess(guess);
+	let correctLetter = updateWordDisplay(guess);
 	
 	//If letter not found in target word then handle then handle incorrect guess
 	if (!correctLetter) {
 				incorrectGuess();
 		}
+	
+	updateWordDisplay();
 
 }
 
@@ -87,8 +89,10 @@ validateGuess(guess){
 }
 
 
-
-
+incorrectGuess(){
+	livesLeft--;
+	alert("Incorrect, you have ${livesLeft} lives left");
+}
 
 
 
