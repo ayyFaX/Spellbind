@@ -77,19 +77,19 @@ body {
 
 		.options h2 {
 			margin-bottom: 10px;
-			font-size: 20px;
+			font-size: 35px;
 			color: #001F3F;
 		}
 
 		.options input[type="radio"],
 		.options select {
-			margin-bottom: 10px;
+			margin-bottom: 15px;
 			cursor: pointer;
 		}
 
 		.options input[type="radio"] + label {
 			margin-left: 5px;
-			font-size: 16px;
+			font-size: 20px;
 			color: #001F3F;
 		}
 
