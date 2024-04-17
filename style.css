@@ -2,7 +2,7 @@ body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #5AC3B0; /* Light pink background */
+            background-color: #5AC3B0; 
         }
 
         
@@ -67,5 +67,42 @@ body {
 		.guess-section {
 			margin-top: 20px;
 		}
+		
+		
+		.options {
+			margin-top: 100px;
+			margin-left: 50px;
+			text-align: left;
+		}
 
-2
+		.options h2 {
+			margin-bottom: 10px;
+			font-size: 20px;
+			color: #001F3F;
+		}
+
+		.options input[type="radio"],
+		.options select {
+			margin-bottom: 10px;
+			cursor: pointer;
+		}
+
+		.options input[type="radio"] + label {
+			margin-left: 5px;
+			font-size: 16px;
+			color: #001F3F;
+		}
+
+		.options select {
+			padding: 5px;
+			font-size: 16px;
+			border-radius: 5px;
+			border: 1px solid #001F3F;
+			background-color: #fff;
+			color: #001F3F;
+		}
+
+		.options select:focus {
+			outline: none;
+			border-color: #FFD700;
+		}

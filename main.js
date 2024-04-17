@@ -9,12 +9,12 @@ function goToPage(pageUrl){
 // One player Gameplay
 
 const words = ["tiger", "elephant", "lion", "gorilla", "sheep", "anteater", "giraffe", "seal", "bear", "panther"];
-lettersGuessed = [];
-targetWord = randomWord();
-currentGuess = createCurrentGuess(targetWord);
-livesLeft = 6;
-hangmanImageIndex = 1;
-hangmanPath = "C:/Users/adamm/Documents/Uni Work/yr2 sem 2/Web Tech/Web tech labs and coursework/Coursework/Spellbind/";
+let lettersGuessed = [];
+let targetWord = randomWord();
+let currentGuess = createCurrentGuess(targetWord);
+let livesLeft = 6;
+let hangmanImageIndex = 1;
+const hangmanPath = "C:/Users/adamm/Documents/Uni Work/yr2 sem 2/Web Tech/Web tech labs and coursework/Coursework/Spellbind/";
 updateWordDisplay();
 updateHangmanImage();
 
