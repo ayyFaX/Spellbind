@@ -1,22 +1,79 @@
-// Function to move between pages
-function goToPage(pageUrl){
-	window.location.href = pageUrl;
-} 
+
 
 
 
 
 // One player Gameplay
 
-const words = ["tiger", "elephant", "lion", "gorilla", "sheep", "anteater", "giraffe", "seal", "bear", "panther"];
 let lettersGuessed = [];
-let targetWord = randomWord();
-let currentGuess = createCurrentGuess(targetWord);
-let livesLeft = 6;
-let hangmanImageIndex = 1;
+let targetWord;
+let currentGuess;
+let livesLeft;
+let handmanImageIndex;
 const hangmanPath = "C:/Users/adamm/Documents/Uni Work/yr2 sem 2/Web Tech/Web tech labs and coursework/Coursework/Spellbind/";
-updateWordDisplay();
-updateHangmanImage();
+
+
+// Function to setup and start game with selected options
+function setupGame(difficulty, category){
+	
+	switch (difficulty){
+		case 'easy':
+			livesLeft = 7;
+			hangmanImageIndex = 1;
+			break;
+		case 'medium':
+			livesLeft = 6;
+			hangmanImageIndex = 2;
+			break;
+		case 'hard':
+			livesLeft = 5;
+			hangmanImageIndex = 3;
+			break;
+		default:
+			livesLeft = 6;
+			hangmanImageIndex = 2;
+			break;
+	}
+	
+	
+	switch (category){
+		case 'animals':
+			words = ["tiger", "elephant", "lion", "gorilla", "sheep", "anteater", "giraffe", "seal", "bear", "panther"];
+			break;
+		case 'sports':
+			words = ["soccer", "basketball", "tennis", "volleyball", "swimming", "golf", "rugby", "cricket", "hockey", "baseball"];
+			break;
+		case 'countries':
+			words = ["unitedstates", "china", "india", "brazil", "russia", "japan", "germany", "unitedkingdom", "france", "italy"];
+			break;
+		default:
+			words = ["tiger", "elephant", "lion", "gorilla", "sheep", "anteater", "giraffe", "seal", "bear", "panther"];
+			break;
+	}
+
+	targetWord = randomWord();
+	currentGuess = createCurrentGuess(targetWord);
+	
+	updateWordDisplay();
+    updateGuessedLetters();
+    updateLivesLeft();
+    updateHangmanImage();
+
+}
+
+
+// Function to start the game
+function startGame(){
+	const selectedDifficulty = document.querySelector('input[name="difficulty"]:checked').value;
+	
+	const selectedCategory = document.querySelector('input[name="category"]:checked').value;
+	
+	setupGame(selectedDifficulty, selectedCategory);
+	
+	
+}
+
+
 
 // Function to get random word from array
 function randomWord(){
@@ -117,13 +174,17 @@ function updateCurrentGuess(guess){
 
 
 
-
+// Function to move between pages
+function goToPage(pageUrl){
+	window.location.href = pageUrl;
+} 
 
 
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('guessBtn').addEventListener('click', guessLetter);
+    document.getElementById('startBtn').addEventListener('click', startGame);
+	document.getElementById('guessBtn').addEventListener('click', guessLetter);
 	
 });
 
