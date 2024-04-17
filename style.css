@@ -106,3 +106,33 @@ body {
 			outline: none;
 			border-color: #FFD700;
 		}
+		
+		.categories-options {
+			display: flex;
+			justify-content: center;
+			margin-top: 50px;
+		}
+
+		.categories {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0 20px;
+		}
+
+		.categories input[type="radio"] {
+			margin-bottom: 5px;
+			cursor: pointer;
+		}
+
+		.categories label {
+			font-size: 18px;
+			color: #001F3F;
+			margin-bottom: 5px;
+		}
+
+		.categories img {
+			width: 300px; 
+			height: auto;
+		margin-top: 5px;
+		}
