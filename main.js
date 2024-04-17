@@ -14,10 +14,9 @@ targetWord = randomWord();
 currentGuess = createCurrentGuess(targetWord);
 livesLeft = 6;
 hangmanImageIndex = 1;
+hangmanPath = "C:/Users/adamm/Documents/Uni Work/yr2 sem 2/Web Tech/Web tech labs and coursework/Coursework/Spellbind/";
 updateWordDisplay();
-hangmanPath = 'Spellbind/';
-
-
+updateHangmanImage();
 
 // Function to get random word from array
 function randomWord(){
@@ -93,8 +92,10 @@ function validateGuess(guess){
 function incorrectGuess(){
 	// Take away a life
 	livesLeft--;
+	hangmanImageIndex++;
 	alert('Incorrect, you have ' + livesLeft + ' lives left'); 
 	updateLivesLeft();
+	updateHangmanImage();
 }
 
 // Function to update the word thats been guessed so far
