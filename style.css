@@ -107,10 +107,17 @@ body {
 			border-color: #FFD700;
 		}
 		
+		.categories-options h2 {
+			margin-bottom: 10px;
+			font-size: 35px;
+			color: #001F3F;
+		}
+		
 		.categories-options {
 			display: flex;
-			justify-content: center;
+			justify-content: left;
 			margin-top: 50px;
+			margin-left: 50px;
 		}
 
 		.categories {
@@ -132,7 +139,7 @@ body {
 		}
 
 		.categories img {
-			width: 300px; 
+			width: 250px; 
 			height: auto;
 		margin-top: 5px;
 		}
