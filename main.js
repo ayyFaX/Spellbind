@@ -13,8 +13,9 @@ lettersGuessed = [];
 targetWord = randomWord();
 currentGuess = createCurrentGuess(targetWord);
 livesLeft = 6;
-hangmanImageIndex = 0;
+hangmanImageIndex = 1;
 updateWordDisplay();
+hangmanPath = 'Spellbind/';
 
 
 
@@ -42,6 +43,11 @@ function updateGuessedLetters(){
 // Function to update lives left
 function updateLivesLeft(){
 	document.getElementById('livesRemaining').textContent = livesLeft
+}
+
+// Function to update hangman Image
+function updateHangmanImage(){
+	document.getElementById('hangmanImage').src = hangmanPath + "hangman" + hangmanImageIndex + ".png";
 }
 
 // Function to get guess from user and validate it
