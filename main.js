@@ -11,6 +11,9 @@ let currentGuess;
 let livesLeft;
 let handmanImageIndex;
 const hangmanPath = "C:/Users/adamm/Documents/Uni Work/yr2 sem 2/Web Tech/Web tech labs and coursework/Coursework/Spellbind/";
+let words;
+
+	
 
 
 // Function to setup and start game with selected options
@@ -53,25 +56,18 @@ function setupGame(difficulty, category){
 
 	targetWord = randomWord();
 	currentGuess = createCurrentGuess(targetWord);
-	
 	updateWordDisplay();
     updateGuessedLetters();
     updateLivesLeft();
     updateHangmanImage();
+	
+	
 
 }
 
 
-// Function to start the game
-function startGame(){
-	const selectedDifficulty = document.querySelector('input[name="difficulty"]:checked').value;
-	
-	const selectedCategory = document.querySelector('input[name="category"]:checked').value;
-	
-	setupGame(selectedDifficulty, selectedCategory);
-	
-	
-}
+
+
 
 
 
@@ -171,7 +167,15 @@ function updateCurrentGuess(guess){
 
 }
 
-
+function selectionsGoToGameplay(){
+	 const selectedDifficulty = document.querySelector('input[name="difficulty"]:checked').value;
+     const selectedCategory = document.querySelector('input[name="category"]:checked').value;
+	 
+	 localStorage.setItem("selectedDifficulty", selectedDifficulty);
+	 localStorage.setItem("selectedCategory", selectedCategory);
+	 
+	 goToPage("gameplay.html");
+}
 
 
 // Function to move between pages
@@ -183,9 +187,11 @@ function goToPage(pageUrl){
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('startBtn').addEventListener('click', startGame);
-	document.getElementById('guessBtn').addEventListener('click', guessLetter);
-	
+    document.getElementById('guessBtn').addEventListener('click', guessLetter);
+	const selectedDifficulty = localStorage.getItem("selectedDifficulty");
+    const selectedCategory = localStorage.getItem("selectedCategory");
+    
+	setupGame(selectedDifficulty, selectedCategory);
 });
 
 	
