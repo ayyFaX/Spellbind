@@ -97,7 +97,9 @@ function updateLivesLeft(){
 
 // Function to update hangman Image
 function updateHangmanImage(){
-	document.getElementById('hangmanImage').src = "hangman" + hangmanImageIndex + ".png";
+	
+	const hangmanImagePath = 'images/hangman' + hangmanImageIndex + '.png';
+    document.getElementById('hangmanImage').src = hangmanImagePath;
 }
 
 // Function to get guess from user and validate it
