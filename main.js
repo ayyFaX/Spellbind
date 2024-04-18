@@ -10,7 +10,7 @@ let targetWord;
 let currentGuess;
 let livesLeft;
 let handmanImageIndex;
-const hangmanPath = "https://github.com/ayyFaX/Spellbind/blob/b4793d439eb86fb9ae47266af9fd5236bc7397c8/";
+const hangmanPath = "hangman";
 let words;
 
 
@@ -98,7 +98,7 @@ function updateLivesLeft(){
 
 // Function to update hangman Image
 function updateHangmanImage(){
-	document.getElementById('hangmanImage').src = hangmanPath + "hangman" + hangmanImageIndex + ".png";
+	document.getElementById('hangmanImage').src = hangmanPath + hangmanImageIndex + ".png";
 }
 
 // Function to get guess from user and validate it
