@@ -10,10 +10,9 @@ let targetWord;
 let currentGuess;
 let livesLeft;
 let handmanImageIndex;
-const hangmanPath = "images/";
+const hangmanPath = "https://github.com/ayyFaX/Spellbind/blob/b4793d439eb86fb9ae47266af9fd5236bc7397c8/";
 let words;
 
-	
 
 
 // Function to setup and start game with selected options
