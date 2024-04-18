@@ -10,7 +10,7 @@ let targetWord;
 let currentGuess;
 let livesLeft;
 let handmanImageIndex;
-const hangmanPath = "Spellbind/";
+const hangmanPath = "images/";
 let words;
 
 	
