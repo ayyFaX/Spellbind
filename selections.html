@@ -2,65 +2,52 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 		<script src="main.js" defer></script>
 		<title>Spellbind</title>
 	</head>
 	
 	<body>
-	<div class="container">
-		<h1>Gameplay Selections</h1>
-		<div class ="options">
+		<div class="container">
+			<h1>Gameplay Selections</h1>
 			
-          
-			<h2>Select difficulty:</h2>
-			<input type="radio" id="easyDiff" name="difficulty" value="easy">
-			<label for="easyDiff">Easy - 7 Lives</label><br>
-			<input type="radio" id="medDiff" name="difficulty" value="medium">
-			<label for="medDiff">Medium - 6 Lives</label><br>
-			<input type="radio" id="hardDiff" name="difficulty" value="hard">
-			<label for="hardDiff">Hard - 5 Lives</label><br>
-		</div>
+				<div class ="options">
+					<h2>Select difficulty:</h2>
+					<input type="radio" id="easyDiff" name="difficulty" value="easy">
+					<label for="easyDiff">Easy - 7 Lives</label><br>
+					<input type="radio" id="medDiff" name="difficulty" value="medium">
+					<label for="medDiff">Medium - 6 Lives</label><br>
+					<input type="radio" id="hardDiff" name="difficulty" value="hard">
+					<label for="hardDiff">Hard - 5 Lives</label><br>
+				</div>
 		
-		<div class="categories-options">
-			<h2>Select Category:</h2>
+				<div class="categories-options">
+					<h2>Select Category:</h2>
 			
-		<div class="categories">
-			<input type="radio" id="animals" name="category" value="animals">
-			<label for="animals">Animals</label>
-			<img src="animals.png">
-		</div>
+					<div class="categories">
+						<input type="radio" id="animals" name="category" value="animals">
+						<label for="animals">Animals</label>
+						<img src="animals.png">
+					</div>
 			
-		<div class="categories">
-			<input type="radio" id="sports" name="category" value="sports">
-			<label for="sports">Sports</label>
-			<img src="sports.png">
-		</div>
+					<div class="categories">
+						<input type="radio" id="sports" name="category" value="sports">
+						<label for="sports">Sports</label>
+						<img src="sports.png">
+					</div>
 
-		<div class="categories">
-			<input type="radio" id="countries" name="category" value="countries">
-			<label for="countries">Countries</label>
-			<img src="countries.png">
-		</div>
+					<div class="categories">
+						<input type="radio" id="countries" name="category" value="countries">
+						<label for="countries">Countries</label>
+						<img src="countries.png">
+					</div>
+		
+				</div>
+		
+			<button id="startBtn" class="btn" onclick="selectionsGoToGameplay()">Start game</button>
 		
 		</div>
-		
-		
-		<button id="startBtn" class="btn" onclick="selectionsGoToGameplay()">Start game</button>
-		
-				
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	</body>
-	
 </html>

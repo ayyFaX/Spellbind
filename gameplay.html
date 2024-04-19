@@ -2,46 +2,38 @@
 <html lang='en'>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, inital-scale=1.0">
+		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 		<script src="main.js" defer></script>
-		
 		<title>Spellbind</title>
 	</head>
 	
 	<body>
 	
-	<div class="container">
-		<h1>Gameplay</h1>
+		<div class="container">
+			<h1>Gameplay</h1>
 	
 		
-		<div class="game-area">
-        
-		<div class="hangman-section">
-			<img id="hangmanImage" src="">
+			<div class="game-area">
+				<div class="hangman-section">
+					<img id="hangmanImage" src="">
+				</div>
+		
+				<div class="game-info">
+					<p>Letters Guessed: <span id="lettersGuessed"></span></p>
+					<p>Guessed Word: <span id="wordDisplay"></span></p>
+					<p>Lives Remaining: <span id="livesRemaining">6</span></p>
+				</div>
+		
+			</div>
+		
+			<div class="guess-section">
+				<input type="text" id="guessInput" placeholder="Enter a letter">
+				<button id="guessBtn" class="btn">Guess</button>
+			</div>
+			
 		</div>
-		
-		<div class="game-info">
-            <p>Letters Guessed: <span id="lettersGuessed"></span></p>
-            <p>Guessed Word: <span id="wordDisplay"></span></p>
-            <p>Lives Remaining: <span id="livesRemaining">6</span></p>
-        </div>
-		
-        </div>
-		
-		
-		<div class="guess-section">
-			<input type="text" id="guessInput" placeholder="Enter a letter">
-			<button id="guessBtn" class="btn">Guess</button>
-		</div>
-     </div>
 	 
-
-	
-
-	</body>
-
-	
-	
+	 </body>
 </html>
 		

@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head> 
-	
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 		<script src="main.js"></script>
-		
 		<title>Spellbind</title>
 	</head>
 	
 	<body>
 	
-	<div class="container">
-		<h1>Welcome to Spellbind the hangman game</h1>
-		<p>Spellbind is an interactive hangman game to played alone or with friends, continue by selecting either one or two players. For playing with two players enter a word into the input box next to the 2 player button and then press 2 players. Enjoy!</p>
-		<button class="btn" onclick="goToPage('selections.html')">1 Player</button>
-		<form id="twoPlayerForm">
-			<input type="text" id="targetWordInput" placeholder="Enter target word">
-			<button type="button" class="btn" onclick="startTwoPlayerGame()">2 Player</button>
-		</form>
-	</div>
+		<div class="container">
+			<h1>Welcome to Spellbind the hangman game</h1>
+			<p>Spellbind is an interactive hangman game to played alone or with friends, continue by selecting either one or two players. For playing with two players enter a word into the input box next to the 2 player button and then press 2 players. Enjoy!</p>
+		
+			<button class="btn" onclick="goToPage('selections.html')">1 Player</button>
+		
+				<form id="twoPlayerForm">
+					<input type="text" id="targetWordInput" placeholder="Enter target word">
+					<button type="button" class="btn" onclick="startTwoPlayerGame()">2 Player</button>
+				</form>
+		</div>
 	
 	</body>
 </html>
