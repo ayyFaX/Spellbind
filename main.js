@@ -122,6 +122,8 @@ function guessLetter(){
 	
 	updateWordDisplay();
 	updateGuessedLetters();
+	
+	handleResults();
 
 }
 
@@ -177,6 +179,28 @@ function selectionsGoToGameplay(){
 	 goToPage("gameplay.html");
 }
 
+function checkGameWin(){
+	return currentGuess === targetWord;
+}
+
+function checkGameLoss(){
+	return livesLeft === 0;
+}
+
+function handleResults(){
+	if (checkGameWin()){
+		goToResults("Congratulations! You guessed the word: ", targetWord);
+	} else if (checkGameLoss()){
+		goToResults("Better luck next time! The word was: ", targetWord);
+	}
+}
+
+function goToResults(message, word){
+	localStorage.setItem("resultMessage", message);
+	localStorage.setItem("guessedWord", word);
+	goToPage("results.html");
+}
+
 
 // Function to move between pages
 function goToPage(pageUrl){
@@ -192,6 +216,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const selectedCategory = localStorage.getItem("selectedCategory");
     
 	setupGame(selectedDifficulty, selectedCategory);
+	
+	const gameResultMessage = localStorage.getItem("resultMessage");
+    const gameGuessedWord = localStorage.getItem("guessedWord");
+
+    // Set the content of the corresponding elements to display game result message and guessed word
+    document.getElementById('resultMessage').textContent = gameResultMessage;
+    document.getElementById('guessedWord').textContent = gameGuessedWord;
+
 });
 
 	
