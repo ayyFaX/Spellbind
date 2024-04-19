@@ -10,7 +10,12 @@ body {
             text-align: center;
             margin-top: 50px;
         }
-
+		
+		input[type="text"] {
+			display: block;
+			margin: 0 auto 20px;
+			margin-top: 50px;
+		}
         
 		h1 {
             color: #001F3F;
