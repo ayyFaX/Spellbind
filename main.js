@@ -161,9 +161,6 @@ function incorrectGuess(){
 	livesLeft--;
 	hangmanImageIndex++;
 	
-	// Display incorrect guess message
-	alert('Incorrect, you have ' + livesLeft + ' lives left'); 
-	
 	// Update values and hangman image being displayed
 	updateLivesLeft();
 	updateHangmanImage();
