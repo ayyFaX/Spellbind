@@ -1,155 +1,150 @@
+/* Global styles */
 body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #5AC3B0; 
-        }
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #5AC3B0; 
+}
 
-        
-		.container {
-            text-align: center;
-            margin-top: 50px;
-        }
-		
-        
-		h1 {
-            color: #001F3F;
-        }
-		
-		
-		p {
-			color: #001F3F;
-		}
-		
-		
-		.btn {
-            display: inline-block;
-            padding: 60px 110px;
-			margin-top: 100px;
-            background-color: #FFD700;
-            color: #001F3F;
-            text-decoration: none;
-            border: none;
-            border-radius: 20px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+h1 {
+    color: #001F3F;
+}
 
-        .btn:hover {
-            background-color: #FFC800;
-        }
-		
-		
-		.game-container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-		}
+p {
+    color: #001F3F;
+}
 
-		.game-area {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			width: 80%;
-		}
 
-		.hangman-section {
-			flex: 1;
-		}
+/* Container styles */
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
 
-		.game-info {
-			flex: 2;
-		}
 
-		.guess-section {
-			margin-top: 20px;
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		.options {
-			margin-top: 30px;
-			margin-left: 50px;
-			text-align: left;
-		}
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 60px 110px;
+    margin-top: 100px;
+    background-color: #FFD700;
+    color: #001F3F;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-		.options h2 {
-			margin-bottom: 10px;
-			font-size: 25px;
-			color: #001F3F;
-		}
+.btn:hover {
+    background-color: #FFC800;
+}
 
-		.options input[type="radio"],
-		.options select {
-			margin-bottom: 15px;
-			cursor: pointer;
-		}
 
-		.options input[type="radio"] + label {
-			margin-left: 5px;
-			font-size: 20px;
-			color: #001F3F;
-		}
+/* Gameplay styles */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
 
-		.options select {
-			padding: 5px;
-			font-size: 16px;
-			border-radius: 5px;
-			border: 1px solid #001F3F;
-			background-color: #fff;
-			color: #001F3F;
-		}
+.game-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
 
-		.options select:focus {
-			outline: none;
-			border-color: #FFD700;
-		}
-		
-		.categories-options h2 {
-			margin-bottom: 10px;
-			font-size: 25px;
-			color: #001F3F;
-		}
-		
-		.categories-options {
-			display: flex;
-			justify-content: left;
-			margin-top: 50px;
-			margin-left: 50px;
-		}
+.hangman-section {
+    flex: 1;
+}
 
-		.categories {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin: 0 20px;
-		}
+.game-info {
+    flex: 2;
+}
 
-		.categories input[type="radio"] {
-			margin-bottom: 5px;
-			cursor: pointer;
-		}
+.guess-section {
+    margin-top: 20px;
+}
 
-		.categories label {
-			font-size: 18px;
-			color: #001F3F;
-			margin-bottom: 5px;
-		}
 
-		.categories img {
-			width: 250px; 
-			height: auto;
-		margin-top: 5px;
-		}
-		
-		
+/* Selections styles */
+.options {
+    margin-top: 30px;
+    margin-left: 50px;
+    text-align: left;
+}
+
+.options h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: #001F3F;
+}
+
+.options input[type="radio"],
+.options select {
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.options input[type="radio"] + label {
+    margin-left: 5px;
+    font-size: 20px;
+    color: #001F3F;
+}
+
+.options select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #001F3F;
+    background-color: #fff;
+    color: #001F3F;
+}
+
+.options select:focus {
+    outline: none;
+    border-color: #FFD700;
+}
+
+
+/* Category styles */
+.categories-options h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: #001F3F;
+}
+
+.categories-options {
+    display: flex;
+    justify-content: left;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.categories input[type="radio"] {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.categories label {
+    font-size: 18px;
+    color: #001F3F;
+    margin-bottom: 5px;
+}
+
+.categories img {
+    width: 250px; 
+    height: auto;
+    margin-top: 5px;
+}
