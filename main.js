@@ -17,6 +17,16 @@ let words;
 // Function to setup and start game with selected options
 function setupGame(difficulty, category){
 	
+	// Code to check difficulty custom indicating 2 player game
+	let customTargetWord = localStorage.getItem('customTargetWord');
+
+    if (difficulty === 'custom' && customTargetWord) {
+        // If custom difficulty and target word are set
+        targetWord = customTargetWord;
+		livesLeft = 6;
+		hangmanImageIndex = 2;
+    } else {
+	
 	switch (difficulty){
 		case 'easy':
 			livesLeft = 7;
@@ -51,8 +61,8 @@ function setupGame(difficulty, category){
 			words = ["tiger", "elephant", "lion", "gorilla", "sheep", "anteater", "giraffe", "seal", "bear", "panther"];
 			break;
 	}
-
 	targetWord = randomWord();
+}
 	currentGuess = createCurrentGuess(targetWord);
 	updateWordDisplay();
     updateGuessedLetters();
@@ -200,6 +210,22 @@ function goToResults(message, word){
 	localStorage.setItem("guessedWord", word);
 	goToPage("results.html");
 }
+
+
+// Function for two player Gameplay
+function startTwoPlayerGame() {
+    const targetWord = document.getElementById('targetWordInput').value.trim();
+    if (targetWord) {
+        localStorage.setItem('selectedDifficulty', 'custom');
+        localStorage.setItem('selectedCategory', 'custom');
+        localStorage.setItem('customTargetWord', targetWord);
+        goToPage('gameplay.html');
+    } else {
+        alert('Please enter a target word!');
+    }
+}
+
+
 
 
 // Function to move between pages
